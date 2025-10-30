@@ -37,7 +37,7 @@ The platform generates high-quality, SEO-optimized articles and automatically pu
 
 ### 📝 Advanced Post-Processing
 - **SEO Optimization**: metadata, keywords, headings hierarchy  
-- **Multi-pass grammar correction**  
+- **Human-like quality control**: multi-layer grammar and style refinement to bypass AI detection tools
 - **Adaptive formatting** (HTML, Markdown, etc.)  
 - **Rich media integration** (video, audio, infographics)  
 
