@@ -1,3 +1,232 @@
+# 🚀 Artical – Intelligent Article Generator
+
+**A complete AI-powered platform for multilingual, SEO-optimized article generation and automated publication**
+
+[![License](https://img.shields.io/badge/License-Proprietary-red)](LICENSE)  
+[![Status](https://img.shields.io/badge/Status-Beta-blue)](#)  
+[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20FR%20%7C%20ES-blue)](#)
+
+---
+
+## 🎯 Project Vision
+
+**Artical** transforms content creation into an automated, intelligent, and multilingual process.  
+The platform generates high-quality, SEO-optimized articles and automatically publishes them across multiple channels.
+
+> **From idea to publication in just a few clicks**, in several languages, with unique personas and automatically generated visuals.
+
+---
+
+## ✨ Key Features
+
+### 🤖 Intelligent Generation
+- **Multi-AI Integration**: compatible with OpenAI GPT-4, Mistral AI, and Google Gemini  
+- **Native Multilingual Support**: English, French, Spanish (more coming soon)  
+- **7 Unique Personas**: consistent and creative writing styles  
+- **Multiple Formats**: articles, podcasts, videos *(in progress)*  
+
+### 🔍 Automated Sourcing
+- **Smart Web Search** (DuckDuckGo + contextual filtering)  
+- **Automatic content extraction & structuring**  
+- **Credibility verification and automatic citations**  
+
+### 🎨 Visual Enrichment
+- **Royalty-free images** (Unsplash, etc.)  
+- **AI-generated images** (DALL·E, Stable Diffusion)  
+- **Automatic SEO optimization** (alt-text, compression, positioning)  
+
+### 📝 Advanced Post-Processing
+- **SEO Optimization**: metadata, keywords, headings hierarchy  
+- **Multi-pass grammar correction**  
+- **Adaptive formatting** (HTML, Markdown, etc.)  
+- **Rich media integration** (video, audio, infographics)  
+
+### 🌐 Multi-Channel Publishing
+- **WordPress / Medium / REST API** integrations  
+- **Scheduled and recurring publications**  
+- **Automated tagging and categorization**  
+
+### 📱 Social Auto-Promotion *(Roadmap)*
+- Automatic distribution (X, LinkedIn, Instagram, etc.)  
+- Format adaptation per platform  
+- Smart scheduling & contextual hashtags  
+- Real-time analytics and engagement tracking  
+
+---
+
+## 🏗️ Technical Architecture
+
+Artical is built on two main components working in synergy:
+
+### ⚙️ **Artical Engine (API)**
+*Content generation and orchestration core*
+
+#### Highlights
+- **Distributed dynamic worker architecture**: each task runs inside a dedicated Linux process, spawned on demand according to system load.  
+- **Smart autoscaling**: the engine can dynamically spawn, monitor, and terminate workers in real time depending on the request volume.  
+- **Fault-tolerant orchestration**: automatic recovery and retry on failure with full task persistence.  
+- **Self-cleaning processes**: each worker cleans up its resources post-execution to maintain optimal performance.  
+- **Centralized supervision interface**: monitor all active workers in real time, stop or restart them manually if needed.  
+- **Horizontal scalability**: more workers = more throughput. Designed for heavy concurrent workloads.  
+- **Full REST API** for integration with external tools and clients.  
+- **Advanced queue management** and recovery mechanisms.  
+
+#### Technologies
+- PHP 8.3+  
+- MySQL 8.0  
+- Supervisor (process orchestration)  
+- OpenRouter (AI model aggregation)  
+- External APIs: Unsplash, DuckDuckGo  
+
+#### Workflow
+1. Receive topic  
+2. Automated web sourcing  
+3. AI generation with persona-driven style  
+4. SEO & visual enrichment  
+5. Post-processing & formatting  
+6. Storage & publication  
+
+---
+
+### 🎨 **Artical Dashboard (Front)**
+*Management and supervision interface*
+
+#### Features
+- Real-time dashboard  
+- Topic and persona management  
+- Credit & billing system  
+- Multi-user with permissions  
+- Article preview and live analytics  
+- API for custom integrations  
+- **Worker monitoring**: CPU load, queue status, manual control (pause, restart, prioritization).  
+
+#### Technologies
+- Laravel 12  
+- Tailwind CSS  
+- Vite  
+- MySQL 8  
+
+---
+
+## 🛠️ Global Workflow
+
+<div align="center">
+
+```mermaid
+graph TD
+    A[👤 User] -->|1. Creates topic| B[🎨 Dashboard]
+    B -->|2. Sends to API| C[⚙️ Engine]
+    C -->|3. Web Sourcing| D[🔍 DuckDuckGo]
+    C -->|4. AI Generation| E[🤖 GPT-4 / Mistral / Gemini]
+    C -->|5. Images| F[🖼️ Unsplash / AI]
+    C -->|6. SEO Optimization| G[✨ Post-processing]
+    G -->|7. Storage| H[(💾 Database)]
+    H -->|8. Publication| I[📢 Multi-Channels]
+    I --> J[📝 WordPress]
+    I --> K[✍️ Medium]
+    I --> L[🔗 REST API]
+    H -->|9. Auto-promotion| M[📱 Social Networks]
+```
+
+</div>
+
+---
+
+## 🎭 The 7 Personas
+
+| Persona | Style | Expertise | Languages |
+|---------|-------|-----------|------------|
+| 👨‍💼 **Camille Perrin** | Professional, analytical | Business, tech, innovation | EN / FR / ES |
+| 👩‍🔬 **Dr. Marie Laurent** | Academic, rigorous | Science, health, research | EN / FR / ES |
+| ✍️ **Thomas Dubois** | Creative, narrative | Culture, art, lifestyle | EN / FR / ES |
+| ⚖️ **Sophie Martin** | Formal, precise | Legal, finance, politics | EN / FR / ES |
+| 🎨 **Lucas Bernard** | Educational, accessible | Tech, tutorials | EN / FR / ES |
+| 🌍 **Emma Rousseau** | Journalistic, factual | News, investigations | EN / FR / ES |
+| 💡 **Alex Moreau** | Inspirational, motivational | Personal development | EN / FR / ES |
+
+---
+
+## 📊 Key Advantages
+
+- **🚀 Speed**: full article generation in 2–5 minutes thanks to parallel workers  
+- **💰 Cost-efficiency**: 90% cheaper than traditional writing agencies  
+- **🌍 Scalability**: horizontally distributed architecture  
+- **🎯 Quality**: consistent SEO and style output  
+- **🔧 Flexibility**: full REST API, multi-format support, customizable parameters  
+
+---
+
+## 📈 Performance Metrics (beta)
+
+| Metric | Value |
+|--------|--------|
+| Articles per day | 500+ |
+| Active languages | 3 |
+| Avg. SEO score | 87/100 |
+| Engine uptime | 99.2 % |
+| Generation time | 2–5 min |
+| Beta satisfaction | 94 % |
+
+---
+
+## 🗺️ Roadmap 2025-2026
+
+### Q1 2025 ✅
+- Engine & dashboard operational  
+- 7 multilingual personas  
+- WordPress / Medium / API publication  
+
+### Q2 2025 🚧
+- Social auto-promotion  
+- Audio / podcast generation  
+- Video support (YouTube, TikTok)  
+- New languages: DE / IT / PT  
+
+### Q3–Q4 2025 📅
+- Persona marketplace  
+- Public API documentation  
+- Mobile apps (iOS / Android)  
+- White-label edition  
+
+---
+
+## 💼 Business Model
+
+- **Pay-as-you-go** pricing (per token)  
+- **Monthly subscriptions** for volume users  
+- **Commercial API** for B2B integrations  
+- **White-label licensing** for agencies  
+
+Optimized via scalable cloud infrastructure, adaptive AI caching, and open sourcing (DuckDuckGo, Unsplash).
+
+---
+
+## 🌟 Why Artical?
+
+- **Advanced distributed orchestration** with self-healing workers and real-time monitoring  
+- **Multilingual persona system** for native-quality writing  
+- **Multi-channel publication**  
+- **Source verification** to reduce AI hallucinations  
+- **Editorial consistency** close to human standards  
+
+---
+
+## 📞 Contact & Demo
+
+📧 **hello@polymathe.net**  
+🌐 **[Demo page](#)** *(coming soon)*  
+
+---
+
+### 🚀 **Join the Intelligent Content Revolution**
+
+**Artical — The AI that writes, illustrates, publishes, and promotes for you.**  
+*From concept to virality in a few clicks.*
+
+---
+
+# 🇫🇷 Version Française
+
 # 🚀 Artical – Générateur d’Articles Intelligents
 
 **Plateforme complète de génération automatique d’articles multilingues optimisés SEO par Intelligence Artificielle**
@@ -106,109 +335,6 @@ Artical repose sur deux briques principales travaillant en synergie :
 - Tailwind CSS  
 - Vite  
 - MySQL 8  
-
----
-
-## 🛠️ Workflow Global
-
-<div align="center">
-
-```mermaid
-graph TD
-    A[👤 Utilisateur] -->|1. Crée un topic| B[🎨 Dashboard]
-    B -->|2. Envoie à l’API| C[⚙️ Engine]
-    C -->|3. Sourcing Web| D[🔍 DuckDuckGo]
-    C -->|4. Génération IA| E[🤖 GPT-4 / Mistral / Gemini]
-    C -->|5. Images| F[🖼️ Unsplash / IA]
-    C -->|6. Optimisation SEO| G[✨ Post-processing]
-    G -->|7. Stockage| H[(💾 Base de données)]
-    H -->|8. Publication| I[📢 Multi-Canaux]
-    I --> J[📝 WordPress]
-    I --> K[✍️ Medium]
-    I --> L[🔗 REST API]
-    H -->|9. Auto-promotion| M[📱 Réseaux Sociaux]
-```
-
-</div>
-
----
-
-## 🎭 Les 7 Personas
-
-| Persona | Style | Expertise | Langues |
-|---------|-------|-----------|---------|
-| 👨‍💼 **Camille Perrin** | Professionnel, analytique | Business, tech, innovation | FR / EN / ES |
-| 👩‍🔬 **Dr. Marie Laurent** | Académique, rigoureuse | Science, santé, recherche | FR / EN / ES |
-| ✍️ **Thomas Dubois** | Créatif, narratif | Culture, arts, lifestyle | FR / EN / ES |
-| ⚖️ **Sophie Martin** | Formel, précis | Juridique, finance, politique | FR / EN / ES |
-| 🎨 **Lucas Bernard** | Accessible, pédagogique | Tech, tutoriels | FR / EN / ES |
-| 🌍 **Emma Rousseau** | Journalistique, factuel | Actualités, investigation | FR / EN / ES |
-| 💡 **Alex Moreau** | Inspirant, motivant | Développement personnel | FR / EN / ES |
-
----
-
-## 📊 Avantages Clés
-
-- **🚀 Rapidité** : génération complète en 2-5 min grâce à la parallélisation des workers  
-- **💰 Économie** : 90 % moins cher qu’une agence  
-- **🌍 Scalabilité** : architecture distribuée et extensible  
-- **🎯 Qualité** : SEO + cohérence stylistique garanties  
-- **🔧 Flexibilité** : API complète, formats multiples, configuration fine  
-
----
-
-## 📈 Indicateurs & Performance (bêta interne)
-
-| Catégorie | Donnée |
-|------------|--------|
-| Articles générés / jour | 500+ |
-| Langues actives | 3 |
-| Score SEO moyen | 87/100 |
-| Uptime moteur | 99.2 % |
-| Temps moyen génération | 2–5 min |
-| Satisfaction bêta-testeurs | à venir |
-
----
-
-## 🗺️ Roadmap 2025-2026
-
-### Q1 2025 ✅
-- Architecture moteur & front opérationnelle  
-- 7 personas multilingues  
-- Publication WordPress / Medium / API  
-
-### Q2 2025 🚧
-- Auto-promotion sociale  
-- Génération audio/podcast  
-- Support vidéo (YouTube, TikTok)  
-- Nouvelles langues : DE / IT / PT  
-
-### Q3-Q4 2025 📅
-- Marketplace de personas  
-- API publique documentée  
-- Application mobile iOS / Android  
-- Version white-label  
-
----
-
-## 💼 Modèle Économique
-
-- **Pay-as-you-go** : facturation au token  
-- **Forfaits mensuels** : volumes flexibles  
-- **API commerciale B2B**  
-- **White-label** pour agences  
-
-Optimisé par une architecture cloud scalable, un cache IA adaptatif et un sourcing libre (DuckDuckGo, Unsplash).
-
----
-
-## 🌟 Pourquoi Artical ?
-
-- **Orchestration distribuée avancée** : processus dynamiques, monitoring temps réel et reprise automatique  
-- **Solution multilingue unique** avec personas natifs  
-- **Publication multi-canaux** intégrée  
-- **Sourcing vérifié** (limite les hallucinations)  
-- **Qualité éditoriale** comparable à un rédacteur humain  
 
 ---
 
