@@ -214,7 +214,7 @@ Optimisé par une architecture cloud scalable, un cache IA adaptatif et un sourc
 
 ## 📞 Contact & Démo
 
-📧 **contact@artical.dev**  
+📧 **hello@polymathe.net**  
 🌐 **[Page de présentation](#)** *(démo à venir)*  
 
 ---
