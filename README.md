@@ -169,24 +169,25 @@ graph TD
 
 ---
 
-## 🗺️ Roadmap 2025-2026
+### 🗺️ **Updated Roadmap 2025–2026**
 
-### Q1 2025 ✅
-- Engine & dashboard operational  
-- 7 multilingual personas  
-- WordPress / Medium / API publication  
+#### ✅ **Q1–Q3 2025 (completed)**
+- Engine & Dashboard fully operational  
+- 7 multilingual personas (FR / EN / ES)  
+- WordPress / Medium / API integrations  
+- Dynamic Linux worker orchestration system  
 
-### Q2 2025 🚧
-- Social auto-promotion  
-- Audio / podcast generation  
+#### 🚧 **Q4 2025 (in progress)**
+- Social auto-promotion (X, LinkedIn, Instagram)  
+- Podcast & audio generation module  
 - Video support (YouTube, TikTok)  
 - New languages: DE / IT / PT  
 
-### Q3–Q4 2025 📅
+#### 📅 **2026 (planned)**
 - Persona marketplace  
 - Public API documentation  
 - Mobile apps (iOS / Android)  
-- White-label edition  
+- White-label edition for agencies  
 
 ---
 
